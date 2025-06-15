@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MessagesComponent } from "./messages/messages.component";
+import { AppRoutingModule } from './app-routing.module';
 
 @Component({
+  standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
+  imports: [MessagesComponent, AppRoutingModule]
 })
 export class AppComponent {
-  title = 'marvel-heroes';
+  title = 'Tour of Heroes';
 }
